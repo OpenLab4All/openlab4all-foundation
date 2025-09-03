@@ -13,7 +13,15 @@ namespace OpenLab4All.Foundation.net48
   {
     static void Main(string[] args)
     {
-      var cnn = new SqlDataAccess("xxx");
+      AppContext.SetSwitch("Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
+
+
+      var cnx = SqlServerConnectionString.Parse("xxx");
+      cnx.TrustServerCertificate = true;
+      var a = cnx.Build();
+
+
+      var cnn = new SqlDataAccess(cnx);
 
       var res = cnn.ExecuteProcedure("[dbo].[sp_alumno_listar]");
 
@@ -26,8 +34,6 @@ namespace OpenLab4All.Foundation.net48
       {
         Console.WriteLine(res.Message);
       }
-
-
 
       var res2 = cnn.ExecuteProcedure(
           "[dbo].[sp_alumno_listar]"

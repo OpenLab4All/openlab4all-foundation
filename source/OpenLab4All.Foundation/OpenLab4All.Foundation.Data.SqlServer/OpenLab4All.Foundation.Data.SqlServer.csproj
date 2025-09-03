@@ -30,7 +30,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
-    <PackageReference Include="OpenLab4All.Foundation.Data" Version="1.25.8.29" />
+    <PackageReference Include="OpenLab4All.Foundation.Data" Version="1.25.9.2" />
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,9 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,11 +27,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -106,6 +106,12 @@
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=7.7.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.7.7.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenLab4All.Foundation.Core, Version=1.25.8.292, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenLab4All.Foundation.Core.1.25.8.292\lib\netstandard2.0\OpenLab4All.Foundation.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenLab4All.Foundation.Data, Version=1.25.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenLab4All.Foundation.Data.1.25.9.2\lib\netstandard2.0\OpenLab4All.Foundation.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -188,17 +194,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenLab4All.Foundation.Core\OpenLab4All.Foundation.Core.csproj">
-      <Project>{34665eed-c1fe-4566-bd6d-1838b577b8ee}</Project>
-      <Name>OpenLab4All.Foundation.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OpenLab4All.Foundation.Data.SqlServer\OpenLab4All.Foundation.Data.SqlServer.csproj">
       <Project>{4f79f5df-29ca-499a-8fea-800e8b5621ac}</Project>
       <Name>OpenLab4All.Foundation.Data.SqlServer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OpenLab4All.Foundation.Data\OpenLab4All.Foundation.Data.csproj">
-      <Project>{3ed77b7a-c8ba-4e69-9881-2a72b2641d5d}</Project>
-      <Name>OpenLab4All.Foundation.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

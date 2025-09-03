@@ -21,6 +21,19 @@ namespace OpenLab4All.Foundation.Data.SqlServer
       _defaultTimeoutSeconds = commandTimeoutSeconds > 0 ? commandTimeoutSeconds : 30;
     }
 
+    public SqlDataAccess(IConnectionString connectionString, int commandTimeoutSeconds = 1800)
+    {
+      if (connectionString == null)
+        throw new ArgumentNullException(nameof(connectionString));
+
+      if (!string.Equals(connectionString.ProviderName, "Microsoft.Data.SqlClient", StringComparison.OrdinalIgnoreCase))
+        throw new NotSupportedException(
+          $"Unsupported provider: {connectionString.ProviderName}. Expected 'Microsoft.Data.SqlClient'.");
+
+      _connectionString = connectionString.Build();
+      _defaultTimeoutSeconds = commandTimeoutSeconds > 0 ? commandTimeoutSeconds : 30;
+    }
+
     public Result TestConnection()
     {
       try
