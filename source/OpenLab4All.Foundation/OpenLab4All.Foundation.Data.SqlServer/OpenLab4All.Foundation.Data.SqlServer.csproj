@@ -29,8 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
-    <PackageReference Include="OpenLab4All.Foundation.Data" Version="1.25.9.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+    <PackageReference Include="OpenLab4All.Foundation.Data" Version="1.26.6.5" />
   </ItemGroup>
 
 </Project>

@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenLab4All.Foundation.Core" Version="1.25.8.292" />
+    <PackageReference Include="OpenLab4All.Foundation.Core" Version="1.26.6.5" />
   </ItemGroup>
 
 </Project>

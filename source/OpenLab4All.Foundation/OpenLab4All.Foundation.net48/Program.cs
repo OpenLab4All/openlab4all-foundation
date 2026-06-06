@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenLab4All.Foundation.Data.Mapping;
 using OpenLab4All.Foundation.Data.SqlServer;
-using OpenLab4All.Foundation.Data.Mapping;
-using OpenLab4All.Foundation.Core;
+using System;
 
 namespace OpenLab4All.Foundation.net48
 {
@@ -16,7 +11,7 @@ namespace OpenLab4All.Foundation.net48
       AppContext.SetSwitch("Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
 
 
-      var cnx = SqlServerConnectionString.Parse("xxx");
+      var cnx = SqlServerConnectionString.Parse("Data Source=mssql.srv.net.pe;Initial Catalog=test;User Id=sa;Password=EswchqK3PfwbjzjMCgJj;");
       cnx.TrustServerCertificate = true;
       var a = cnx.Build();
 
